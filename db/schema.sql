@@ -1,2 +1,3 @@
 DROP DATABASE IF EXISTS rem_db;
-CREATE DATATBASE rem_db;
+CREATE DATABASE rem_db;
+USE rem_db;

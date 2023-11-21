@@ -8,10 +8,7 @@ const connection = mysql.createConnection({
   user: process.env.MYSQL_USER,
   password: process.env.MYSQL_PASSWORD,
   database:process.env.MYSQL_DATABASE,
-
-});
-
-require('dotenv').config();
+}).promise();
 
 const sequelize = new Sequelize(
   process.env.DB_NAME,
@@ -24,4 +21,5 @@ const sequelize = new Sequelize(
   }
 );
 
+module.exports = connection;
 module.exports = sequelize;
