@@ -4,7 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./routes');
 const homeControl = require('./controllers/homeController');
-const sleepyCycleControl = require('./controllers/sleepyCycleController.js');
+const sleepyCycleControl = require('./controllers/sleepCycleController');
 const userControl = require('./controllers/userController');
 const helpers = require('./utils/helper');
 const sequelize = require('./config/connection');
@@ -14,6 +14,9 @@ const { User } = require('./models');
 const { SleepCycle } = require('./models');
 
 const hbs = exphbs.create({ helpers });
+
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 const sess = {
   secret: 'Super secret secret',
