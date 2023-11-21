@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars');
 const routes = require('./routes');
 const sequelize = require('./config/connection');
 const { User } = require('./models');
+const { SleepCycle } = require('./models');
 
 const app = express();
 const PORT = process.env.PORT || 3001;

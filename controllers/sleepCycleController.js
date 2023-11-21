@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { SleepCycle } = require('../models');
+
 const withAuth = require('../../utils/auth');
 
 // check auth on all project routes

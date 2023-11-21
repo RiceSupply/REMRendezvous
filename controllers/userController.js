@@ -2,19 +2,20 @@ const router = require('express').Router();
 const { LastPage } = require('@mui/icons-material');
 const { User } = require('../models');
 
-const createUser = async (req, res) => {
+router.post('/', async (req, res) => {
   try {
-    const newUser = await User.create({
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-  })
+    const userData = await User.create(req.body);
 
-    res.json(newUser);
-} catch (err) {
-  res.json(err);
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+
+      res.status(200).json(userData);
+    });
+  } catch (err) {
+    res.status(400).json(err);
   }
-};
+});
 
 router.post('/login', async (req, res) => {
   try {
