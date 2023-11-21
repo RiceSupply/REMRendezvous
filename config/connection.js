@@ -3,11 +3,13 @@ const mysql = require('mysql2');
 const Sequelize = require('sequelize');
 
 const connection = mysql.createConnection({
-  host: 'localhost', //127.0.0.1
+  host: 'localhost',
   user: process.env.MYSQL_USER,
   password: process.env.MYSQL_PASSWORD,
   database: process.env.MYSQL_DATABASE,
-}).promise();
+});
+
+connection.promise();
 
 const sequelize = new Sequelize(
   process.env.DB_NAME,

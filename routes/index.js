@@ -1,6 +1,6 @@
 const express = require('express');
 const apiRoutes = express.Router();
-const routes = require('./apiRoutes'); // Assuming this is the correct import
+const routes = require('./apiRoutes');
 
 apiRoutes.use('/api', routes);
 
