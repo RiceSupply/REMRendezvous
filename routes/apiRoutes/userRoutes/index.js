@@ -1,7 +1,8 @@
-const router = require('express').Router();
+const express = require('express');
+const userApiRoutes = express.Router();
+const { getUsers } = require('../../../controllers/userController');
 
-// /api/userRoutes
+// /api/user 
+userApiRoutes.get('/', getUsers);
 
-router.get('/');
-
-module.exports = router;
+module.exports = userApiRoutes;

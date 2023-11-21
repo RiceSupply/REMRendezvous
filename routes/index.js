@@ -1,6 +1,7 @@
-const router = require('express').Router();
-const apiRoutes = require('./apiRoutes');
+const express = require('express');
+const apiRoutes = express.Router();
+const routes = require('./apiRoutes'); // Assuming this is the correct import
 
-router.use('/api', apiRoutes)
+apiRoutes.use('/api', routes);
 
-module.exports = router;
+module.exports = apiRoutes;

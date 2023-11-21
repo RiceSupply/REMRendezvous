@@ -1,4 +1,4 @@
-INSERT INTO users (text)
+INSERT INTO user (text)
 VALUES ('Alex'),
        ('Brandon'),
        ('Ricky'),
