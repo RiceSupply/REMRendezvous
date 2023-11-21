@@ -6,7 +6,7 @@ const newFormHandler = async (event) => {
   const description = document.querySelector('#sleep-journal').value.trim();
 
   if (name && hours && description) {
-    const response = await fetch(`routes/api/sleep`, {
+    const response = await fetch(`api/sleep`, {
       method: 'POST',
       body: JSON.stringify({ name, hours, description }),
       headers: {
@@ -26,7 +26,7 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`routes/api/sleep/${id}`, {
+    const response = await fetch(`api/sleep/${id}`, {
       method: 'DELETE',
     });
 

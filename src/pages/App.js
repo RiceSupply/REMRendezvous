@@ -1,7 +1,8 @@
+import TopBar from "@/components/Topbar/TopBar";
+
 function APP () {
   return (
-    <div classname = "App" > 
-     REM Rendezvous </div>
+    <TopBar/>
   );
 }
 

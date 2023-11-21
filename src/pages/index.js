@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {Navbar} from '../../components/Navbar'
+import {Navbar} from '../components/Navbar'
 import '../styles/globals.css'
 import '../styles/Home.module.css'
 import './_document.js'
