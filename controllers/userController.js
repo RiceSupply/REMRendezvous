@@ -1,13 +1,21 @@
-const connection = require('../config/connection');
+const router = require('express').Router();
+const { LastPage } = require('@mui/icons-material');
+const { User } = require('../models');
 
-const getUsers = async (req, res) => {
+const createUser = async (req, res) => {
   try {
-    const [rows] = await connection.query('SELECT * FROM `user`;');
-    res.json(rows);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ error });
+    const newUser = await User.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+  })
+
+    res.json(newUser);
+} catch (err) {
+  res.json(err);
   }
 };
 
-module.exports = { getUsers };
+module.exports = {
+  createUser,
+}

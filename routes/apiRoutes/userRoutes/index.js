@@ -1,8 +1,9 @@
-const express = require('express');
-const userRoutes = express.Router();
-const { getUsers } = require('../../../controllers/userController');
+const router = require('express').Router();
+const sleepCycleRoutes = require('./sleepCycleRoutes');
+const homeRoutes = require('./homeRoutes');
+const { createUser } = require('../../../controllers/userController');
 
 // /api/user 
-userRoutes.get('/', getUsers);
+router.post('/', createUser);
 
-module.exports = userRoutes;
+module.exports = router;
