@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "nodemon start",
     "seed": "node seeds/seed.js",
     "lint": "next lint"
   },
