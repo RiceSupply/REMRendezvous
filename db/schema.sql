@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS rem_api;
-CREATE DATABASE rem_api;
+DROP DATABASE IF EXISTS remrendezvous;
+CREATE DATABASE remrendezvous;
 
-USE rem_api;
+USE remrendezvous;
 
 CREATE TABLE user (
   id INT NOT NULL AUTO_INCREMENT,
