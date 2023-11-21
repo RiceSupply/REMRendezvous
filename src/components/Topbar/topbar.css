@@ -7,3 +7,28 @@
   display: flex;
   align-items: center;
 }
+
+.topLeft,
+.topRight {
+  flex: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topCenter {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.groupListItem,
+.groupListItem {
+  list-style: none;
+  margin: 0;
+  padding:0;
+  font-size: 20px;
+  color: black;
+  list-style: none;
+}

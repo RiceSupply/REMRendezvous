@@ -2,13 +2,25 @@ import './topbar.css';
 
 export default function TopBar() {
   return (
-    <div className="top-bar">REM RENDEZVOUS
       <div className="top">
-        <div className="top-left">
+        <div className="topLeft">
+          <ul className="groupList">
+            <li className="groupListItem">Brandon Sur</li>
+            <li className="groupListItem">Alex Le</li>
+            <li className="groupListItem">Ricky Phung</li>
+            <li className="groupListItem">Jared Eye</li>
+            </ul>
           </div>
-        <div className="top-right">
+        <div className="topCenter">
+
+          </div>
+        <div className="topRight">
+        <ul className="navList">
+            <li className="navListItem">HOME</li>
+            <li className="navListItem">Write</li>  
+            <li className="navListItem">LOGOUT</li>
+            </ul>
         </div>
       </div>
-    </div>
   )
 }
