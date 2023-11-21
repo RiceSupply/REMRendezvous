@@ -1,11 +1,2 @@
 DROP DATABASE IF EXISTS remrendezvous;
 CREATE DATABASE remrendezvous;
-
-USE remrendezvous;
-
-CREATE TABLE user (
-  id INT NOT NULL AUTO_INCREMENT,
-  text VARCHAR(255) NOT NULL,
-  hasAnAccount BOOLEAN NOT NULL DEFAULT 0,
-  PRIMARY KEY (id)
-);
