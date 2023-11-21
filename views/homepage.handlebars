@@ -1,0 +1,19 @@
+<!-- Loop over each object in the projects array -->
+{{#each sleepCycles as |sleepCycle| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <a href="/sleep/{{sleepCycle.id}}">{{sleepCycle.name}}</a>
+    </h2>
+    <p>
+      {{format_amount sleepCycle.hours_of_sleep}} hours slept!
+    </p>
+    <p>Created by {{sleepCycle.user.name}} on {{format_date sleepCycle.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{sleepCycle.description}}
+    </p>
+  </div>
+</div>
+{{/each}}
