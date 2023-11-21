@@ -12,7 +12,7 @@ export default function TopBar() {
             </ul>
           </div>
         <div className="topCenter">
-
+          <h1 className="title">REM RENDEZVOUS</h1>
           </div>
         <div className="topRight">
         <ul className="navList">
